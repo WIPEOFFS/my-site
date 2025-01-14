@@ -1,0 +1,97 @@
+/* Подключаем шрифт из Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* Основные стили для страницы */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle, rgba(18,32,43,1) 0%, rgba(36,61,76,1) 50%, rgba(44,83,100,1) 100%), 
+                url('https://www.transparenttextures.com/patterns/cubes.png'); /* Футуристический фон */
+    background-size: cover;
+    background-attachment: fixed;
+    color: #f1f1f1;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Стиль для заголовка */
+header {
+    background: linear-gradient(135deg, rgba(0,0,0,0.9), rgba(0,0,0,0.6));
+    color: #00d8ff; /* Светящийся акцент */
+    padding: 40px;
+    text-align: center;
+    border-bottom: 2px solid #00d8ff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+}
+
+h1 {
+    margin: 0;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px #00d8ff, 0 0 20px #00d8ff;
+}
+
+/* Секция с контентом */
+.content {
+    padding: 40px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    backdrop-filter: blur(8px); /* Эффект размытия на фоне */
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+}
+
+.content p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #e0e0e0;
+}
+
+/* Эффекты на текст */
+.content p:hover {
+    color: #00d8ff;
+    text-shadow: 0 0 10px #00d8ff, 0 0 20px #00d8ff;
+    transition: all 0.3s ease;
+}
+
+/* Подвал страницы */
+footer {
+    background: linear-gradient(135deg, rgba(0,0,0,0.9), rgba(0,0,0,0.7));
+    color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.7);
+}
+
+footer p {
+    margin: 0;
+    color: #00d8ff;
+    text-shadow: 0 0 5px #00d8ff;
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Применяем анимацию к главному контенту */
+.content {
+    animation: fadeIn 2s ease-in-out;
+}
